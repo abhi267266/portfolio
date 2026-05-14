@@ -1,65 +1,104 @@
-import Image from "next/image";
+import Sidebar from "@/components/Sidebar";
+import ServiceCard from "@/components/ServiceCard";
+import ProjectCard from "@/components/ProjectCard";
+import JournalItem from "@/components/JournalItem";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="split-pane">
+      <Sidebar />
+      
+      <main className="main-content">
+        <section id="intro" style={{ marginBottom: 'var(--spacing-2xl)', position: 'relative' }}>
+          <div className="glow" style={{ position: 'absolute', top: '20%', left: '-10%', width: '100%', height: '100%' }}></div>
+          <h2 className="label label-md" style={{ color: 'var(--on-surface-variant)', marginBottom: 'var(--spacing-md)', letterSpacing: '0.2em' }}>SYSTEM ARCHITECT</h2>
+          <h1 className="display-md" style={{ fontSize: '4.5rem', fontWeight: 800, maxWidth: '800px', lineHeight: 1.0 }}>
+            Building Resilient <span style={{ color: 'var(--primary-container)' }}>Distributed Systems</span> & <span style={{ color: 'var(--primary-container)' }}>Scalable APIs</span>.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="body-lg" style={{ maxWidth: '600px', marginTop: 'var(--spacing-xl)', marginBottom: 'var(--spacing-2xl)' }}>
+            Specializing in the invisible architecture that powers modern web scale. 
+            I design systems that handle millions of requests with sub-millisecond latency.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-sm)' }}>
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#4ddcc6', boxShadow: '0 0 10px #4ddcc6' }}></span>
+            <p className="label label-sm" style={{ color: 'var(--on-surface-variant)', letterSpacing: '0.1em' }}>AVAILABLE FOR SELECT CONTRACTS</p>
+          </div>
+        </section>
+
+        <section id="services" style={{ marginBottom: 'var(--spacing-2xl)' }}>
+          <h2 className="label label-md" style={{ color: 'var(--primary)', marginBottom: 'var(--spacing-lg)' }}>01. Core Services</h2>
+          <div style={{ display: 'grid', gap: 'var(--spacing-md)' }}>
+            <ServiceCard 
+              number="01"
+              title="API Design & Orchestration"
+              description="Crafting clean, performant, and hyper-documented REST and gRPC interfaces. Leveraging Go and Node.js for high-throughput transactional flows."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            <ServiceCard 
+              number="02"
+              title="Cloud Infrastructure"
+              description="Architecting infrastructure as code using Terraform and AWS. Expert implementation of Kubernetes clusters for automated scaling and fault tolerance."
+            />
+            <ServiceCard 
+              number="03"
+              title="Database Optimization"
+              description="Strategic scaling of relational databases and NoSQL solutions. Expert in PostgreSQL tuning, Redis caching layers, and distributed data consistency."
+            />
+          </div>
+        </section>
+
+        <section id="projects" style={{ marginBottom: 'var(--spacing-2xl)' }}>
+          <h2 className="label label-md" style={{ color: 'var(--primary)', marginBottom: 'var(--spacing-lg)' }}>02. Selected Work</h2>
+          <ProjectCard 
+            title="VectorScale DB"
+            description="Engineered a high-performance vector search wrapper for distributed SQL environments."
+            impact="Reduced Latency by 30%"
+          />
+          <ProjectCard 
+            title="QuantFlow"
+            description="High-performance, strictly zero-allocation, fixed-point integer trading engine written in Go."
+            impact="1400x Speedup and 10^-8 Precision"
+            url="https://github.com/abhi267266/quant-backtester"
+          />
+          <ProjectCard 
+            title="LeadPulse"
+            description="AI-powered lead generation engine using a Postgres-backed distributed queue for atomic job processing."
+            impact="Atomic Job Delivery"
+            url="https://lead-finder-client.vercel.app/"
+          />
+        </section>
+
+        <section id="journal" style={{ marginBottom: 'var(--spacing-2xl)' }}>
+          <h2 className="label label-md" style={{ color: 'var(--primary)', marginBottom: 'var(--spacing-lg)' }}>03. From the Journal</h2>
+          <div>
+            <JournalItem 
+              date="MAY 12, 2024"
+              title="Why I didn't use Redis for my background workers"
+              url="https://medium.com/@abhi267266/why-i-didnt-use-redis-for-my-background-workers-328b9f1d144d"
+            />
+            <JournalItem 
+              date="AUG 04, 2023"
+              title="Why Your Postgres Indexing Strategy is Failing"
+            />
+          </div>
+        </section>
+
+        <section id="contact" style={{ marginBottom: 'var(--spacing-2xl)', paddingTop: 'var(--spacing-2xl)' }}>
+          <div className="card glass" style={{ textAlign: 'center', padding: 'var(--spacing-2xl)' }}>
+            <h2 className="headline-lg" style={{ marginBottom: 'var(--spacing-md)' }}>READY TO SCALE?</h2>
+            <p className="body-lg" style={{ marginBottom: 'var(--spacing-xl)' }}>
+              Currently open to architecting roles and distributed systems consulting for high-growth startups.
+            </p>
+            <a href="mailto:abhishek@pathak.dev" className="btn-primary">
+              abhishek@pathak.dev ↗
+            </a>
+          </div>
+        </section>
+
+        <footer style={{ paddingTop: 'var(--spacing-xl)', borderTop: '1px solid rgba(60, 73, 70, 0.1)' }}>
+          <p className="label label-sm" style={{ opacity: 0.4 }}>© 2024 ABHISHEK PATHAK. ALL SYSTEMS OPERATIONAL.</p>
+        </footer>
       </main>
+
     </div>
   );
 }
