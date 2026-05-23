@@ -8,8 +8,8 @@ const Sidebar = () => {
         <div style={{ marginBottom: 'var(--spacing-xl)', display: 'flex', alignItems: 'center', gap: 'var(--spacing-md)' }}>
           <div style={{ width: '64px', height: '64px', borderRadius: '12px', overflow: 'hidden', backgroundColor: 'var(--surface-container-high)' }}>
             <Image
-              src="/avatar.png"
-              alt="Alex Rivera"
+              src="/avatar.jpg"
+              alt="Abhishek Pathak"
               width={64}
               height={64}
               style={{ objectFit: 'cover' }}
