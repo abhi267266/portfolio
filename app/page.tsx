@@ -11,8 +11,8 @@ export default function Home() {
       <main className="main-content">
         <section id="intro" style={{ marginBottom: 'var(--spacing-2xl)', position: 'relative' }}>
           <div className="glow" style={{ position: 'absolute', top: '20%', left: '-10%', width: '100%', height: '100%' }}></div>
-          <h2 className="label label-md" style={{ color: 'var(--on-surface-variant)', marginBottom: 'var(--spacing-md)', letterSpacing: '0.2em' }}>SYSTEM ARCHITECT</h2>
-          <h1 className="display-md" style={{ fontSize: '4.5rem', fontWeight: 800, maxWidth: '800px', lineHeight: 1.0 }}>
+          <h2 className="label label-md" style={{ color: 'var(--on-surface-variant)', marginBottom: 'var(--spacing-md)', letterSpacing: '0.2em' }}>FULL STACK DEVELOPER</h2>
+          <h1 className="display-md hero-title" style={{ fontWeight: 800, maxWidth: '800px', lineHeight: 1.0 }}>
             Building Resilient <span style={{ color: 'var(--primary-container)' }}>Distributed Systems</span> & <span style={{ color: 'var(--primary-container)' }}>Scalable APIs</span>.
           </h1>
           <p className="body-lg" style={{ maxWidth: '600px', marginTop: 'var(--spacing-xl)', marginBottom: 'var(--spacing-2xl)' }}>
@@ -42,6 +42,11 @@ export default function Home() {
               number="03"
               title="Database Optimization"
               description="Strategic scaling of relational databases and NoSQL solutions. Expert in PostgreSQL tuning, Redis caching layers, and distributed data consistency."
+            />
+            <ServiceCard
+              number="04"
+              title="Frontend Optimization & Creation"
+              description="Developing responsive, pixel-perfect, and SEO-optimized web interfaces. Expert optimization of Core Web Vitals, Next.js performance, and modern CSS architectures."
             />
           </div>
         </section>
@@ -84,10 +89,10 @@ export default function Home() {
         </section>
 
         <section id="contact" style={{ marginBottom: 'var(--spacing-2xl)', paddingTop: 'var(--spacing-2xl)' }}>
-          <div className="card glass" style={{ textAlign: 'center', padding: 'var(--spacing-2xl)' }}>
+          <div className="card glass contact-card" style={{ textAlign: 'center' }}>
             <h2 className="headline-lg" style={{ marginBottom: 'var(--spacing-md)' }}>READY TO SCALE?</h2>
             <p className="body-lg" style={{ marginBottom: 'var(--spacing-xl)' }}>
-              Currently open to architecting roles and distributed systems consulting for high-growth startups.
+              Contact me here to build a Resilient, Performant, Secure and Scalable Distributed Systems.
             </p>
             <a href="mailto:abhi26726@gmail.com" className="btn-primary">
               abhishek@pathak.dev ↗
