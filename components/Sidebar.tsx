@@ -87,11 +87,11 @@ const Sidebar = () => {
             </a>
           </nav>
 
-          <div style={{ marginTop: 'var(--spacing-2xl)' }}>
+          {/* <div style={{ marginTop: 'var(--spacing-2xl)' }}>
             <button className="btn-secondary" style={{ padding: 'var(--spacing-md) var(--spacing-xl)', minWidth: '180px' }}>
               <span className="label label-sm">DOWNLOAD CV</span>
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div style={{ marginTop: 'auto', paddingTop: 'var(--spacing-2xl)' }}>
