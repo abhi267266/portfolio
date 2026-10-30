@@ -76,14 +76,19 @@ export default function Home() {
           <h2 className="label label-md" style={{ color: 'var(--primary)', marginBottom: 'var(--spacing-lg)' }}>03. From the Journal</h2>
           <div>
             <JournalItem
-              date="MAY 14, 2024"
+              date="MAY 12, 2026"
+              title="Why I didn't use Redis for my background workers"
+              url="https://medium.com/@abhi267266/why-i-didnt-use-redis-for-my-background-workers-328b9f1d144d"
+            />
+            <JournalItem
+              date="MAY 14, 2026"
               title="Building a Zero-Allocation Quantitative Trading Engine: The QuantFlow Journey"
               url="https://medium.com/@abhi267266/building-a-zero-allocation-quantitative-trading-engine-the-quantflow-journey-296c4bc4aff2"
             />
             <JournalItem
-              date="MAY 12, 2024"
-              title="Why I didn't use Redis for my background workers"
-              url="https://medium.com/@abhi267266/why-i-didnt-use-redis-for-my-background-workers-328b9f1d144d"
+              date="OCT 30, 2026"
+              title="The Future of AI Might Not Belong to OpenAI or Anthropic"
+              url="https://medium.com/@abhi267266/the-future-of-ai-might-not-belong-to-openai-or-anthropic-8a07cb995a28"
             />
           </div>
         </section>
